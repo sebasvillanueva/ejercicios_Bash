@@ -1,0 +1,26 @@
+#!/bin/bash
+#mensaje y accion segun hora
+#autor:Johns
+clear
+#c=`date date +%H":"%M`
+#username="$(whoami)"
+
+echo "la hora es "$1" "
+echo "usuario logeado "$2" "
+
+num=`echo $1 | cut -d: -f1`
+
+if [ $num -ge 5 -a $num -lt 13 ]; then
+        echo "Buenos dias usuario "$2" , presione ENTER para ejecutar nano"
+	read 
+        sudo nano 
+else
+        if [ $num -ge 13 -a $num -lt 20 ]; then
+        echo "Buenas tardes usuario "$2""
+        else
+        echo "Buenas noches usuario "$2", se cerrara sesion, pressione ENTER"
+	read
+	sudo pkill -KILL -u $2
+        fi
+fi
+

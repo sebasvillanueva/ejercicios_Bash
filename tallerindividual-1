@@ -1,0 +1,8 @@
+#! /bin/bash
+# listar
+#autor:Johns
+
+echo "se listara el directorio "$1" "
+
+ls -lh "$1"
+
