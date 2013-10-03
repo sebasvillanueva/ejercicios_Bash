@@ -7,6 +7,6 @@ echo "acontinuacion se mostrara las usb montadas y desmontadas: "
 sudo cat /var/log/syslog | grep -e Mounted -e Unmounted
 sudo cat /var/log/syslog | grep -e Mounted -e Unmounted > usb.txt
 
-c=`sendemail -f johnsebas43@gmail.com -t johnsebas43@gmail.com -s smtp.gmail.com:587 -u \ "Monitoreo montaje y desmontaje USB" -m "Buen dia, se adjunta un archivo de texto donde se informa las usb montadas y desmontadas en su sistema, gracias!" -a /home/sebas/usb.txt -v -xu johnsebas43 -xp villanuevauru -o tls=yes`
+c=`sendemail -f johnsebas43@gmail.com -t johnsebas43@gmail.com -s smtp.gmail.com:587 -u \ "Monitoreo montaje y desmontaje USB" -m "Buen dia, se adjunta un archivo de texto donde se informa las usb montadas y desmontadas en su sistema, gracias!" -a /home/sebas/usb.txt -v -xu johnsebas43 -xp contraseña -o tls=yes`
 
 echo "se ha enviado un email al usuario"
