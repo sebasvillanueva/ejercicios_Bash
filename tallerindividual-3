@@ -1,10 +1,10 @@
 #!/bin/bash
 #archivos modificados ayer
-#autor:Johns
 
 c=`date +'%b %e' -d "yesterday"`
-echo "Se buscaran los archivos modificados el dia "$c""
+echo "Se buscaran los archivos modificados el dia "$c" en el directorio $HOME"
+
 echo "Los archivos modificados ayer son: "
 
 
-sudo ls -l | grep "$c"
+sudo ls $HOME -lR | grep "$c"

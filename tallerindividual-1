@@ -1,8 +1,10 @@
 #! /bin/bash
 # listar
-#autor:Johns
 
 echo "se listara el directorio "$1" "
 
+echo "se encontraron los siguientes archivo y/o carpetas: "
+
 ls -lh "$1"
+
 

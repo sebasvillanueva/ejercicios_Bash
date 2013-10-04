@@ -1,6 +1,5 @@
 #!/bin/bash
 #mensaje y accion segun hora
-#autor:Johns
 clear
 #c=`date date +%H":"%M`
 #username="$(whoami)"

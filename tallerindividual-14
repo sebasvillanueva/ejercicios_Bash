@@ -1,16 +1,17 @@
 #!/bin/bash
 #eliminar virus
-#autor:Johns
 
-num=`ls /media/sebas/`
 
+num=`ls /media`
+num2=`ls /media/$num`
+echo "eliminacion de virus"
 echo "los archivos encontrados son:"
 
-ls /media/sebas/$num
+ls /media/$num/$num2
 
-echo "se eliminaran los virus de la usb "$num""
+echo "se eliminaran los virus de la usb "$num2""
 
 
-sudo rm -f -v /media/sebas/$num/autorun.inf /media/sebas/$num/*.lnk /media/sebas/$num/*.com /media/sebas/$num/recycler /media/sebas/$num/*.bat
+sudo rm -f -v /media/$num/$num2/autorun.inf /media/$num/$num2/*.lnk /media/$num/$num2/*.com /media/$num/$num2/recycler /media/$num/$num2/*.bat
 
 echo "los virus se han eliminado"
